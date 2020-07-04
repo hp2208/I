@@ -1,0 +1,20 @@
+var gPlayData = {
+    "beforelink": "play_all.html?4101",//「前へ」
+    "nextlink":   "play_all.html?4103",//「次へ」
+    "jptitle": "第41課",//タイトルはplaylist.htmlから書き写す
+    "para": [
+        {
+            "fileName": "B-27_0-0.mp3",
+            "lang": "jp",
+            "script": "<th>2．</th><td colspan=\"2\"><ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>と<ruby>松<rt>まつ</rt></ruby><ruby>本<rt>もと</rt></ruby><ruby>部<rt>ぶ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか。したことに○を<ruby>付<rt>つ</rt></ruby>けてください。</td>"
+        }, {
+            "fileName": "B-27_1-1.mp3",
+            "lang": "jp",
+            "script": "<th>1）</th><td colspan=\"2\"><ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>、わたしたちはいい<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>で</rt></ruby>をたくさん<ruby>持<rt>も</rt></ruby>って、きょうこの<ruby>学<rt>がっ</rt></ruby><ruby>校<rt>こう</rt></ruby>を<ruby>卒<rt>そつ</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>します。<ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>はわたしたちみんなの<ruby>誕<rt>たん</rt></ruby><ruby>生<rt>じょう</rt></ruby><ruby>日<rt>び</rt></ruby>に、ピアノを<ruby>弾<rt>ひ</rt></ruby>いてくださいました。サッカーの<ruby>試<rt>し</rt></ruby><ruby>合<rt>あい</rt></ruby>で<ruby>負<rt>ま</rt></ruby>けても、「<ruby>次<rt>つぎ</rt></ruby>の<ruby>試<rt>し</rt></ruby><ruby>合<rt>あい</rt></ruby>で<ruby>頑<rt>がん</rt></ruby><ruby>張<rt>ば</rt></ruby>れ」と<ruby>言<rt>い</rt></ruby>ってくださいました。わたしたちが<ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>したくないと<ruby>言<rt>い</rt></ruby>ったとき、いろいろなゲームをして<ruby>楽<rt>たの</rt></ruby>しい<ruby>授<rt>じゅ</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>をしてくださいました。でも、きょう、さようならを<ruby>言<rt>い</rt></ruby>わなければなりません。とても<ruby>寂<rt>さび</rt></ruby>しくて、<ruby>悲<rt>かな</rt></ruby>しいです。<ruby>中<rt>ちゅう</rt></ruby><ruby>学<rt>がっ</rt></ruby><ruby>校<rt>こう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>ったら、いい<ruby>友<rt>とも</rt></ruby><ruby>達<rt>だち</rt></ruby>をたくさん<ruby>作<rt>つく</rt></ruby>って、<ruby>頑<rt>がん</rt></ruby><ruby>張<rt>ば</rt></ruby>って<ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>やスポーツをしたいと<ruby>思<rt>おも</rt></ruby>います。<ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>、ほんとうにありがとうございました。<br/>３<ruby>月<rt>がつ</rt></ruby><ruby>20日<rt>はつか</rt></ruby>、<ruby>山<rt>やま</rt></ruby><ruby>田<rt>だ</rt></ruby><ruby>太<rt>た</rt></ruby><ruby>郎<rt>ろう</rt></ruby></td>"
+        }, {
+            "fileName": "B-27_2-1.mp3",
+            "lang": "jp",
+            "script": "<th>2）</th><td colspan=\"2\"><ruby>松<rt>まつ</rt></ruby><ruby>本<rt>もと</rt></ruby><ruby>部<rt>ぶ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>、きょうで30<ruby>年<rt>ねん</rt></ruby>の<ruby>会<rt>かい</rt></ruby><ruby>社<rt>しゃ</rt></ruby><ruby>生<rt>せい</rt></ruby><ruby>活<rt>かつ</rt></ruby>が<ruby>終<rt>お</rt></ruby>わって、あしたからは<ruby>新<rt>あたら</rt></ruby>しい<ruby>生<rt>せい</rt></ruby><ruby>活<rt>かつ</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まるんですね。おめでとうございます。わたしは<ruby>部<rt>ぶ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>にたくさんのことを<ruby>教<rt>おし</rt></ruby>えていただきました。<ruby>残<rt>ざん</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>したとき、「<ruby>腹<rt>はら</rt></ruby>が<ruby>減<rt>へ</rt></ruby>ってはいくさができぬ。まず<ruby>食<rt>た</rt></ruby>べよう」と<ruby>言<rt>い</rt></ruby>って、<ruby>牛<rt>ぎゅう</rt></ruby>どんを<ruby>食<rt>た</rt></ruby>べに<ruby>連<rt>つ</rt></ruby>れて<ruby>行<rt>い</rt></ruby>ってくださいました。『<ruby>腹<rt>はら</rt></ruby>が<ruby>減<rt>へ</rt></ruby>ってはいくさができぬ』は『おなかがすいたら、いい<ruby>仕<rt>し</rt></ruby><ruby>事<rt>ごと</rt></ruby>ができない』という<ruby>意<rt>い</rt></ruby><ruby>味<rt>み</rt></ruby>だと<ruby>教<rt>おし</rt></ruby>えてくださいました。<ruby>病<rt>びょう</rt></ruby><ruby>気<rt>き</rt></ruby>で<ruby>会<rt>かい</rt></ruby><ruby>社<rt>しゃ</rt></ruby>を<ruby>休<rt>やす</rt></ruby>んだときも、お<ruby>見<rt>み</rt></ruby><ruby>舞<rt>ま</rt></ruby>いに<ruby>来<rt>き</rt></ruby>てくださいました。<ruby>社<rt>しゃ</rt></ruby><ruby>員<rt>いん</rt></ruby><ruby>旅<rt>りょ</rt></ruby><ruby>行<rt>こう</rt></ruby>で<ruby>何<rt>なに</rt></ruby>か<ruby>歌<rt>うた</rt></ruby>えと<ruby>言<rt>い</rt></ruby>われて、<ruby>困<rt>こま</rt></ruby>っていたとき、<ruby>部<rt>ぶ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>がいっしょに<ruby>歌<rt>うた</rt></ruby>ってくださいました。<ruby>松<rt>まつ</rt></ruby><ruby>本<rt>もと</rt></ruby><ruby>部<rt>ぶ</rt></ruby><ruby>長<rt>ちょう</rt></ruby>、ありがとうございました。ほんとうにお<ruby>疲<rt>つか</rt></ruby>れさまでした。</td>"
+        }, 
+    ],
+};

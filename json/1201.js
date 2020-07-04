@@ -1,0 +1,60 @@
+var gPlayData = {
+    "beforelink": "",//そのまま
+    "nextlink":"play_all.html?1202",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第12課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>1．</th><td colspan="2">キムさんの1<ruby>週間<rt>しゅうかん</rt></ruby>はどうでしたか。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ａ：</td><td>キムさん、お<ruby>元気<rt>げんき</rt></ruby>ですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、まあ。<ruby>今週<rt>こんしゅう</rt></ruby>はとても<ruby>忙<rt>いそが</rt></ruby>しかったです。ちょっと<ruby>疲<rt>つか</rt></ruby>れました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>ああ、そうですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>月曜日<rt>げつようび</rt></ruby>は<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>でした。<ruby>日曜日<rt>にちようび</rt></ruby>、<ruby>勉強<rt>べんきょう</rt></ruby>しませんでしたから、とても<ruby>難<rt>むずか</rt></ruby>しかったです。</td>',
+        '<th>1）</th><td class="subhead">Ａ：</td><td><ruby>火曜日<rt>かようび</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>6<ruby>時<rt>じ</rt></ruby>まで<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>しました。それから、マリアさんにブラジルのダンスを<ruby>習<rt>なら</rt></ruby>いました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>へえ、ブラジルのダンスですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、<ruby>難<rt>むずか</rt></ruby>しかったですが、とても<ruby>楽<rt>たの</rt></ruby>しかったです。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td><ruby>水曜日<rt>すいようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みでしたね。<ruby>水曜日<rt>すいようび</rt></ruby>も<ruby>忙<rt>いそが</rt></ruby>しかったですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ。<ruby>友達<rt>ともだち</rt></ruby>と<ruby>京都<rt>きょうと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。お<ruby>祭<rt>まつ</rt></ruby>りを<ruby>見<rt>み</rt></ruby>ました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>へえ、よかったですね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、とてもすてきでした。でも、<ruby>人<rt>ひと</rt></ruby>がとても<ruby>多<rt>おお</rt></ruby>かったです。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>夜<rt>よる</rt></ruby>、<ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>帰<rt>かえ</rt></ruby>りましたから、ちょっと<ruby>疲<rt>つか</rt></ruby>れました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。<ruby>忙<rt>いそが</rt></ruby>しかったですね。</td>',
+        '<th>3）</th><td class="subhead">Ａ：</td><td><ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>朝<rt>あさ</rt></ruby>から4<ruby>時<rt>じ</rt></ruby>まで<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>しました。<ruby>夜<rt>よる</rt></ruby>、グプタさんのうちでカレーを<ruby>食<rt>た</rt></ruby>べました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>インドカレーですね。おいしかったですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、おいしかったですよ。あまり<ruby>辛<rt>から</rt></ruby>くなかったです。</td>',
+        '<th>4）</th><td class="subhead">Ａ：</td><td><ruby>金曜日<rt>きんようび</rt></ruby>も<ruby>忙<rt>いそが</rt></ruby>しかったですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、<ruby>金曜日<rt>きんようび</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>からレポートを<ruby>書<rt>か</rt></ruby>きました。<ruby>午後<rt>ごご</rt></ruby>5<ruby>時<rt>じ</rt></ruby>から9<ruby>時<rt>じ</rt></ruby>まで<ruby>本屋<rt>ほんや</rt></ruby>でアルバイトをしました。<ruby>仕事<rt>しごと</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しくなかったですが、うちで1<ruby>時<rt>じ</rt></ruby>まで、またレポートを<ruby>書<rt>か</rt></ruby>きました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。<ruby>忙<rt>いそが</rt></ruby>しい1<ruby>週間<rt>しゅうかん</rt></ruby>でしたね。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "a-47_0-0.mp3",
+        "a-47_0-1.mp3",
+        "a-47_0-2.mp3",
+        "a-47_0-3.mp3",
+        "a-47_0-4.mp3",
+        "a-47_1-1.mp3",
+        "a-47_1-2.mp3",
+        "a-47_1-3.mp3",
+        "a-47_1-4.mp3",
+        "a-47_2-1.mp3",
+        "a-47_2-2.mp3",
+        "a-47_2-3.mp3",
+        "a-47_2-4.mp3",
+        "a-47_2-5.mp3",
+        "a-47_2-6.mp3",
+        "a-47_2-7.mp3",
+        "a-47_3-1.mp3",
+        "a-47_3-2.mp3",
+        "a-47_3-3.mp3",
+        "a-47_3-4.mp3",
+        "a-47_4-1.mp3",
+        "a-47_4-2.mp3",
+        "a-47_4-3.mp3",
+    ]
+};

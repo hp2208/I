@@ -1,0 +1,60 @@
+var gPlayData = {
+    "beforelink": "play_all.html?1902",//そのまま
+    "nextlink": "",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第19課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>3．</th><td colspan="2">ホームステイに<ruby>行<rt>い</rt></ruby>って、<ruby>日本人<rt>にほんじん</rt></ruby>のお<ruby>母<rt>かあ</rt></ruby>さんといっしょに<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。<ruby>今<rt>いま</rt></ruby>はどうですか。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ａ：</td><td>この<ruby>写真<rt>しゃしん</rt></ruby>、どこですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>この<ruby>町<rt>まち</rt></ruby>ですよ。40<ruby>年<rt>ねん</rt></ruby>まえに<ruby>撮<rt>と</rt></ruby>りました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>へえ、<ruby>木<rt>き</rt></ruby>がたくさんありましたね。えっ、ここに<ruby>川<rt>かわ</rt></ruby>がありますね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ。でも、<ruby>今<rt>いま</rt></ruby>はありません。<ruby>高<rt>たか</rt></ruby>いビルが<ruby>多<rt>おお</rt></ruby>くなって、<ruby>木<rt>き</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなりました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。</td>',
+        '<th>1）</th><td class="subhead">Ａ：</td><td>こちら、ご<ruby>主人<rt>しゅじん</rt></ruby>ですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、<ruby>結婚<rt>けっこん</rt></ruby>するまえに、<ruby>撮<rt>と</rt></ruby>りました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>へえ、ハンサムでしたね。<ruby>髪<rt>かみ</rt></ruby>も<ruby>長<rt>なが</rt></ruby>くて……。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>でも、<ruby>今<rt>いま</rt></ruby>はね、<ruby>全然<rt>ぜんぜん</rt></ruby>ありませんよ。それに、<ruby>目<rt>め</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>くなって、おなかも<ruby>大<rt>おお</rt></ruby>きくなって……。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>残念<rt>ざんねん</rt></ruby>ね。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td>これ、ご<ruby>主人<rt>しゅじん</rt></ruby>の<ruby>会社<rt>かいしゃ</rt></ruby>ですか。「マフー」……<ruby>有名<rt>ゆうめい</rt></ruby>なコンピューターソフトの<ruby>会社<rt>かいしゃ</rt></ruby>ですね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、20<ruby>年<rt>ねん</rt></ruby>まえに、<ruby>作<rt>つく</rt></ruby>りました。とても<ruby>小<rt>ちい</rt></ruby>さい<ruby>会社<rt>かいしゃ</rt></ruby>でした。<ruby>社員<rt>しゃいん</rt></ruby>は<ruby>2人<rt>ふたり</rt></ruby>だけでしたが、<ruby>今<rt>いま</rt></ruby>は1,000<ruby>人<rt>にん</rt></ruby>になりました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>新<rt>あたら</rt></ruby>しい<ruby>製品<rt>せいひん</rt></ruby>「デルソフト」はすごいですね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ。おかげさまで、とても<ruby>有名<rt>ゆうめい</rt></ruby>になりました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですね。みんな、<ruby>知<rt>し</rt></ruby>っていますよ。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、でも、<ruby>忙<rt>いそが</rt></ruby>しくなりましたよ。<ruby>夫<rt>おっと</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みが<ruby>全然<rt>ぜんぜん</rt></ruby>ありません。</td>',
+        '<th>3）</th><td class="subhead">Ｂ：</td><td>これは30<ruby>年<rt>ねん</rt></ruby>まえに、<ruby>近<rt>ちか</rt></ruby>くの<ruby>公園<rt>こうえん</rt></ruby>で<ruby>撮<rt>と</rt></ruby>りました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>たくさん<ruby>子<rt>こ</rt></ruby>どもがいますね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>公園<rt>こうえん</rt></ruby>はいつもとてもにぎやかでしたよ。でも、<ruby>今<rt>いま</rt></ruby>はね……。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>小<rt>ちい</rt></ruby>さい<ruby>子<rt>こ</rt></ruby>どもをあまり<ruby>見<rt>み</rt></ruby>ませんね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、<ruby>子<rt>こ</rt></ruby>どもが<ruby>少<rt>すく</rt></ruby>なくなりましたからね。これから、<ruby>日本<rt>にほん</rt></ruby>は<ruby>大変<rt>たいへん</rt></ruby>ですよ。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "b-23_0-0.mp3",
+        "b-23_0-1.mp3",
+        "b-23_0-2.mp3",
+        "b-23_0-3.mp3",
+        "b-23_0-4.mp3",
+        "b-23_0-5.mp3",
+        "b-23_1-1.mp3",
+        "b-23_1-2.mp3",
+        "b-23_1-3.mp3",
+        "b-23_1-4.mp3",
+        "b-23_1-5.mp3",
+        "b-23_1-6.mp3",
+        "b-23_2-1.mp3",
+        "b-23_2-2.mp3",
+        "b-23_2-3.mp3",
+        "b-23_2-4.mp3",
+        "b-23_2-5.mp3",
+        "b-23_2-6.mp3",
+        "b-23_3-1.mp3",
+        "b-23_3-2.mp3",
+        "b-23_3-3.mp3",
+        "b-23_3-4.mp3",
+        "b-23_3-5.mp3",
+    ]
+};

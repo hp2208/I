@@ -1,0 +1,62 @@
+var gPlayData = {
+    "beforelink": "play_all.html?2003",//そのまま
+    "nextlink":"",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第20課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>4．</th><td colspan="2">グプタさんは<ruby>何<rt>なに</rt></ruby>をしますか。あとの<ruby>文<rt>ぶん</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いて、○、×を<ruby>書<rt>か</rt></ruby>いてください。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ｂ：</td><td><ruby>課長<rt>かちょう</rt></ruby>、おはようございます。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>あ、グプタさん、おはよう。けさからパソコンの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>くて……。グプタさん、わかる？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>はい、わたしの<ruby>専門<rt>せんもん</rt></ruby>ですから。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>午後<rt>ごご</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>で<ruby>使<rt>つか</rt></ruby>いたいけど、……できる？ 　</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>何<rt>なん</rt></ruby><ruby>時<rt>じ</rt></ruby>ですか。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>2<ruby>時<rt>じ</rt></ruby>から。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>2<ruby>時<rt>じ</rt></ruby>ですか。わかりました。<ruby>大<rt>だい</rt></ruby><ruby>丈<rt>じょう</rt></ruby><ruby>夫<rt>ぶ</rt></ruby>です。</td>',
+        '<th>　　</th><td colspan="2" class="star">♪グプタさんは2<ruby>時<rt>じ</rt></ruby>までにパソコンを<ruby>修理<rt>しゅうり</rt></ruby>します。</td>',
+        '<th>1）</th><td class="subhead">Ａ：</td><td>グプタさん、<ruby>冬休<rt>ふゆやす</rt></ruby>みは<ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>るの？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>いいえ。<ruby>両親<rt>りょうしん</rt></ruby>が<ruby>日本<rt>にほん</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ますから。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>いいね。ご<ruby>両親<rt>りょうしん</rt></ruby>とどこか<ruby>行<rt>い</rt></ruby>くの？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>北海道<rt>ほっかいどう</rt></ruby>へ<ruby>雪<rt>ゆき</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>じゃ、<ruby>飛行機<rt>ひこうき</rt></ruby>やホテルを<ruby>予約<rt>よやく</rt></ruby>しないといけないね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>飛行機<rt>ひこうき</rt></ruby>は<ruby>先週<rt>せんしゅう</rt></ruby><ruby>予約<rt>よやく</rt></ruby>しました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>ホテルは？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ホテルは、<ruby>北海道<rt>ほっかいどう</rt></ruby>に<ruby>友達<rt>ともだち</rt></ruby>がいますから……。</td>',
+        '<th>　　</th><td colspan="2" class="star">♪グプタさんはホテルと<ruby>飛行機<rt>ひこうき</rt></ruby>を<ruby>予約<rt>よやく</rt></ruby>します。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td>グプタさん、<ruby>相撲<rt>すもう</rt></ruby>はどう？　<ruby>好<rt>す</rt></ruby>き？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>テレビで<ruby>見<rt>み</rt></ruby>たことがありますが、<ruby>速<rt>はや</rt></ruby>いですから、よくわかりませんでした。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>チケット、あるけど、どう？</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ありがとうございます。でも、<ruby>相撲<rt>すもう</rt></ruby>はちょっと……。ミラーさんは<ruby>相撲<rt>すもう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですよ。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>あ、そう。じゃ。</td>',
+        '<th>　　</th><td colspan="2" class="star">♪グプタさんは<ruby>土曜日<rt>どようび</rt></ruby>にミラーさんと<ruby>相撲<rt>すもう</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "b-27_0-0.mp3",
+        "b-27_0-1.mp3",
+        "b-27_0-2.mp3",
+        "b-27_0-3.mp3",
+        "b-27_0-4.mp3",
+        "b-27_0-5.mp3",
+        "b-27_0-6.mp3",
+        "b-27_0-7.mp3",
+        "b-27_0-8.mp3",
+        "b-27_1-1.mp3",
+        "b-27_1-2.mp3",
+        "b-27_1-3.mp3",
+        "b-27_1-4.mp3",
+        "b-27_1-5.mp3",
+        "b-27_1-6.mp3",
+        "b-27_1-7.mp3",
+        "b-27_1-8.mp3",
+        "b-27_1-9.mp3",
+        "b-27_2-1.mp3",
+        "b-27_2-2.mp3",
+        "b-27_2-3.mp3",
+        "b-27_2-4.mp3",
+        "b-27_2-5.mp3",
+        "b-27_2-6.mp3",
+    ]
+};

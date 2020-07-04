@@ -1,0 +1,60 @@
+var gPlayData = {
+    "beforelink": "play_all.html?1803",//そのまま
+    "nextlink":"",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第18課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>4．</th><td colspan="2">ケリー<ruby>先<rt>せん</rt></ruby><ruby>生<rt>せい</rt></ruby>はどちらを<ruby>先<rt>さき</rt></ruby>にしますか。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ａ：</td><td>ケリー<ruby>先生<rt>せんせい</rt></ruby>、7<ruby>月<rt>がつ</rt></ruby>31<ruby>日<rt>にち</rt></ruby>から2<ruby>週<rt>しゅう</rt></ruby><ruby>間<rt>かん</rt></ruby>、<ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りますね。<ruby>先生<rt>せんせい</rt></ruby>が<ruby>帰<rt>かえ</rt></ruby>るまえに、パーティーをしたいですが、いつがいいですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>そうですね。あのう、21<ruby>日<rt>にち</rt></ruby>から25<ruby>日<rt>にち</rt></ruby>まで<ruby>北海道<rt>ほっかいどう</rt></ruby>を<ruby>旅行<rt>りょこう</rt></ruby>したいですから……<ruby>帰<rt>かえ</rt></ruby>ってから、お<ruby>願<rt>ねが</rt></ruby>いします。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>わかりました。じゃ、28<ruby>日<rt>にち</rt></ruby>はどうですか。<ruby>金曜日<rt>きんようび</rt></ruby>ですが。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>28<ruby>日<rt>にち</rt></ruby>。<ruby>大<rt>だい</rt></ruby><ruby>丈<rt>じょう</rt></ruby><ruby>夫<rt>ぶ</rt></ruby>ですよ。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</td>',
+        '<th>1）</th><td class="subhead">Ｃ：</td><td>はい、<ruby>北海道<rt>ほっかいどう</rt></ruby>ホテルです。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>あのう、<ruby>今晩<rt>こんばん</rt></ruby>、<ruby>部屋<rt>へや</rt></ruby>はありますか。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>はい、あります。</td>',
+        '<th>　　</th><td colspan="2">…………</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>いらっしゃいませ。お<ruby>部屋<rt>へや</rt></ruby>はこちらです。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>わあ、<ruby>広<rt>ひろ</rt></ruby>いですね。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>おふろも<ruby>広<rt>ひろ</rt></ruby>くて、きれいですよ。お<ruby>食事<rt>しょくじ</rt></ruby>のまえに、おふろをどうぞ。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>えっ、<ruby>食事<rt>しょくじ</rt></ruby>のまえに？　わたしはいつも<ruby>寝<rt>ね</rt></ruby>るまえに、<ruby>入<rt>はい</rt></ruby>りますが……。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>かしこまりました。じゃ、お<ruby>食<rt>しょく</rt></ruby><ruby>事<rt>じ</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>ます。おふろは24<ruby>時<rt>じ</rt></ruby><ruby>間<rt>かん</rt></ruby><ruby>入<rt>はい</rt></ruby>ることができますから。どうぞごゆっくり。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td>ケリー<ruby>先生<rt>せんせい</rt></ruby>、<ruby>北海道<rt>ほっかいどう</rt></ruby>はいかがでしたか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>とてもすてきでした。また、<ruby>行<rt>い</rt></ruby>きたいですが……。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>今<rt>こん</rt></ruby><ruby>晩<rt>ばん</rt></ruby>はパーティーですよ。<ruby>忘<rt>わす</rt></ruby>れないでください。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>はい。パーティーに<ruby>行<rt>い</rt></ruby>くまえに、うちへ<ruby>帰<rt>かえ</rt></ruby>って、<ruby>服<rt>ふく</rt></ruby>を<ruby>換<rt>か</rt></ruby>えますね。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>はい、じゃ、またあとで。</td>',
+        '<th>3）</th><td class="subhead">Ｂ：</td><td>こんばんは。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>あ、ケリー<ruby>先生<rt>せんせい</rt></ruby>、どうぞこちらへ。さあ、<ruby>皆<rt>みな</rt></ruby>さん、<ruby>乾<rt>かん</rt></ruby><ruby>杯<rt>ぱい</rt></ruby>しましょう。</td>',
+        '<th>　　</th><td class="subhead">Ｄ：</td><td><ruby>待<rt>ま</rt></ruby>ってください。<ruby>乾<rt>かん</rt></ruby><ruby>杯<rt>ぱい</rt></ruby>するまえに、みんなで<ruby>写<rt>しゃ</rt></ruby><ruby>真<rt>しん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りませんか。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>あ、そうですね。じゃあ、<ruby>皆<rt>みな</rt></ruby>さん、こちらへ<ruby>来<rt>き</rt></ruby>てください。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "b-20_0-0.mp3",
+        "b-20_0-1.mp3",
+        "b-20_0-2.mp3",
+        "b-20_0-3.mp3",
+        "b-20_0-4.mp3",
+        "b-20_1-1.mp3",
+        "b-20_1-2.mp3",
+        "b-20_1-3.mp3",
+        "@1",
+        "b-20_1-4.mp3",
+        "b-20_1-5.mp3",
+        "b-20_1-6.mp3",
+        "b-20_1-7.mp3",
+        "b-20_1-8.mp3",
+        "b-20_2-1.mp3",
+        "b-20_2-2.mp3",
+        "b-20_2-3.mp3",
+        "b-20_2-4.mp3",
+        "b-20_2-5.mp3",
+        "b-20_3-1.mp3",
+        "b-20_3-2.mp3",
+        "b-20_3-3.mp3",
+        "b-20_3-4.mp3",
+    ]
+};

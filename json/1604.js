@@ -1,0 +1,60 @@
+var gPlayData = {
+    "beforelink": "play_all.html?1603",//そのまま
+    "nextlink":"",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第16課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>4．</th><td colspan="2">どんな<ruby>所<rt>ところ</rt></ruby>、どんな<ruby>物<rt>もの</rt></ruby>、どんな<ruby>人<rt>ひと</rt></ruby>ですか。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ａ：</td><td><ruby>先月<rt>せんげつ</rt></ruby>、うちを<ruby>買<rt>か</rt></ruby>いました。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>えっ、<ruby>小山<rt>こやま</rt></ruby>さん、すごいですね。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>ちょっと<ruby>駅<rt>えき</rt></ruby>から<ruby>遠<rt>とお</rt></ruby>いですが、<ruby>緑<rt>みどり</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くて、<ruby>静<rt>しず</rt></ruby>かで、いい<ruby>所<rt>ところ</rt></ruby>です。カリナさんといっしょに<ruby>遊<rt>あそ</rt></ruby>びに<ruby>来<rt>き</rt></ruby>てください。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ、ありがとうございます。</td>',
+        '<th>1）</th><td class="subhead">Ｂ：</td><td>カリナさん、<ruby>小山<rt>こやま</rt></ruby>さんにプレゼントを<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>きましょう。<ruby>何<rt>なに</rt></ruby>がいいですか。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>そうですね。<ruby>小山<rt>こやま</rt></ruby>さんの<ruby>奥<rt>おく</rt></ruby>さんは<ruby>花<rt>はな</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですから、<ruby>花<rt>はな</rt></ruby>はどうですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>いいですね。じゃ、あの<ruby>花屋<rt>はなや</rt></ruby>で<ruby>買<rt>か</rt></ruby>いましょう。</td>',
+        '<th>　　</th><td class="subhead">Ｄ：</td><td>いらっしゃいませ。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>どれがいいですか。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>そうですね。あの<ruby>白<rt>しろ</rt></ruby>くて、<ruby>大<rt>おお</rt></ruby>きい<ruby>花<rt>はな</rt></ruby>がきれいですね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td>さあ、どうぞたくさん<ruby>食<rt>た</rt></ruby>べてください。</td>',
+        '<td colspan="2" class="subhead">Ｂ・Ｃ：</td><td>はい、ありがとうございます。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>あのう、これは<ruby>何<rt>なん</rt></ruby>ですか。この<ruby>黒<rt>くろ</rt></ruby>くて、<ruby>小<rt>ちい</rt></ruby>さい<ruby>物<rt>もの</rt></ruby>。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>それは<ruby>魚<rt>さかな</rt></ruby>の<ruby>卵<rt>たまご</rt></ruby>です。おいしいですよ。</td>',
+        '<td colspan="2" class="subhead">Ｂ・Ｃ：</td><td>はい、いただきます。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td>うーん、おいしい。</td>',
+        '<th>3）</th><td class="subhead">Ｂ：</td><td><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>てもいいですか。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>ええ、どうぞ。</td>',
+        '<th>　　</th><td class="subhead">Ｃ：</td><td><ruby>家族<rt>かぞく</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>ですね。これはどなたですか。この<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くて、<ruby>髪<rt>かみ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>い<ruby>人<rt>ひと</rt></ruby>です。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>それは<ruby>妻<rt>つま</rt></ruby>の<ruby>弟<rt>おとうと</rt></ruby>です。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>奥<rt>おく</rt></ruby>さんの<ruby>弟<rt>おとうと</rt></ruby>さんですか。ハンサムですね。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "b-12_0-0.mp3",
+        "b-12_0-1.mp3",
+        "b-12_0-2.mp3",
+        "b-12_0-3.mp3",
+        "b-12_0-4.mp3",
+        "b-12_1-1.mp3",
+        "b-12_1-2.mp3",
+        "b-12_1-3.mp3",
+        "b-12_1-4.mp3",
+        "b-12_1-5.mp3",
+        "b-12_1-6.mp3",
+        "b-12_1-7.mp3",
+        "b-12_2-1.mp3",
+        "b-12_2-2.mp3",
+        "b-12_2-3.mp3",
+        "b-12_2-4.mp3",
+        "b-12_2-5.mp3",
+        "b-12_2-6.mp3",
+        "b-12_3-1.mp3",
+        "b-12_3-2.mp3",
+        "b-12_3-3.mp3",
+        "b-12_3-4.mp3",
+        "b-12_3-5.mp3",
+    ]
+};

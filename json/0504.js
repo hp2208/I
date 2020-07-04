@@ -1,0 +1,60 @@
+var gPlayData = {
+    "beforelink": "play_all.html?0503",//そのまま
+    "nextlink": "play_all.html?0505",//ファイル名は固定、後ろの数字だけ1個後のセクション
+    "jptitle": "第５課",//タイトルはplaylist.htmlから書き写す
+    "jp": [//日本語データ
+        '<th>4．</th><td colspan="2">ミラーさんの<ruby>生活<rt>せいかつ</rt></ruby>はどんな<ruby>生活<rt>せいかつ</rt></ruby>ですか。</td>',
+        '<th><ruby>例<rt>れい</rt></ruby>）</th><td class="subhead">Ａ：</td><td>ミラーさん、いつ<ruby>日本<rt>にほん</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ましたか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>去年<rt>きょねん</rt></ruby>の9<ruby>月<rt>がつ</rt></ruby>です。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>家族<rt>かぞく</rt></ruby>と<ruby>来<rt>き</rt></ruby>ましたか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>いいえ、<ruby>一人<rt>ひとり</rt></ruby>で<ruby>来<rt>き</rt></ruby>ました。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。</td>',
+        '<th>1）</th><td class="subhead">Ａ：</td><td><ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>何<rt>なん</rt></ruby><ruby>時<rt>じ</rt></ruby>からですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>8<ruby>時半<rt>じはん</rt></ruby>からです。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>毎晩<rt>まいばん</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>にうちへ<ruby>帰<rt>かえ</rt></ruby>りますか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>8<ruby>時<rt>じ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります。あ、あしたは<ruby>月曜日<rt>げつようび</rt></ruby>ですね、10<ruby>時<rt>じ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。<ruby>大変<rt>たいへん</rt></ruby>ですね。</td>',
+        '<th>2）</th><td class="subhead">Ａ：</td><td><ruby>毎日<rt>まいにち</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>へ<ruby>何<rt>なん</rt></ruby>で<ruby>行<rt>い</rt></ruby>きますか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。<ruby>地下鉄<rt>ちかてつ</rt></ruby>で<ruby>新大阪<rt>しんおおさか</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。<ruby>新大阪<rt>しんおおさか</rt></ruby>から<ruby>会社<rt>かいしゃ</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて、うーん、20<ruby>分<rt>ぷん</rt></ruby>ですね。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>そうですか。<ruby>毎日<rt>まいにち</rt></ruby><ruby>大変<rt>たいへん</rt></ruby>ですね。</td>',
+        '<th>3）</th><td class="subhead">Ａ：</td><td><ruby>来週<rt>らいしゅう</rt></ruby><ruby>東京<rt>とうきょう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きますね。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>ええ。<ruby>金曜日<rt>きんようび</rt></ruby>に。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td><ruby>新幹線<rt>しんかんせん</rt></ruby>ですか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td>いいえ、<ruby>飛行機<rt>ひこうき</rt></ruby>で。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>だれと<ruby>行<rt>い</rt></ruby>きますか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>山田<rt>やまだ</rt></ruby>さんと。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>いつ<ruby>帰<rt>かえ</rt></ruby>りますか。</td>',
+        '<th>　　</th><td class="subhead">Ｂ：</td><td><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby><ruby>帰<rt>かえ</rt></ruby>ります。</td>',
+        '<th>　　</th><td class="subhead">Ａ：</td><td>え？　<ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby><ruby>行<rt>い</rt></ruby>きます、<ruby>夜<rt>よる</rt></ruby><ruby>帰<rt>かえ</rt></ruby>ります。<ruby>大変<rt>たいへん</rt></ruby>ですね。</td>',
+    ],
+    "en": [//英語データ。　【注】日本語データと件数を同じにしてください。
+    ],
+    "mp3": [//音声データ。　【注】日本語データと件数を同じにしてください。
+        //本文会話はsx_h_xx.mp3を使います。hが目印です
+        "@1",
+
+        "a-21_0-0.mp3",
+        "a-21_0-1.mp3",
+        "a-21_0-2.mp3",
+        "a-21_0-3.mp3",
+        "a-21_0-4.mp3",
+        "a-21_0-5.mp3",
+        "a-21_1-1.mp3",
+        "a-21_1-2.mp3",
+        "a-21_1-3.mp3",
+        "a-21_1-4.mp3",
+        "a-21_1-5.mp3",
+        "a-21_2-1.mp3",
+        "a-21_2-2.mp3",
+        "a-21_2-3.mp3",
+        "a-21_3-1.mp3",
+        "a-21_3-2.mp3",
+        "a-21_3-3.mp3",
+        "a-21_3-4.mp3",
+        "a-21_3-5.mp3",
+        "a-21_3-6.mp3",
+        "a-21_3-7.mp3",
+        "a-21_3-8.mp3",
+        "a-21_3-9.mp3",
+    ]
+};
