@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>HS</title>
+    <style>
+            @font-face {
+        font-family: IPAMincho;
+        src: url('fonts/ipam.ttf');
+      }
+      @font-face {
+        font-family: KanjiStrokeOrders;
+        src: url('fonts/KanjiStrokeOrders_v4.003.ttf');
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 15px;
+        font-family: IPAMincho;
+          background-color: white;
+      }
+      button {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color:#333;
+        color:#ddd;
+      }
+      .container {
+        width: 277mm;
+        top: 0;
+        margin: 0 auto;
+        font-size: 0px;
+      }
+      .row {
+        width: 277mm;
+        min-height: 94mm;
+        max-height: 94mm;
+        overflow: hidden;
+        font-size: 0;
+        position: relative;
+        line-height: 0.9;
+      }
+      .row > a {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-weight: bolder;
+        font-family: IPAMincho;
+      }
+      .odd-page > a {
+        font-weight: normal;
+        font-family: KanjiStrokeOrders;
+      }
+      .row:nth-child(odd) {
+        height: var(--row-height-fl);
+        background-color: var(--b);
+        border-bottom: 0.5mm solid gray;
+      }
+      .row:nth-child(even) {
+        height: var(--row-height-fl);
+        background-color: var(--c);
+        transform: rotate(180deg);
+      }
+      rt {
+        font-size: 70px;
+        font-family: IPAMincho;
+        font-weight: normal;
+      }
+      .icon {
+        font-size: 8px;
+        background-color: rgb(231, 231, 231);
+        color: #333333;
+        border: none;
+        text-decoration: none;
+        border-radius: 6px;
+        padding: 4px;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+      }
+      p,
+      button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      @media print {
+        p,
+        button,
+        table,
+        code {
+          display: none;
+        }
+        @page {
+          size: A4 landscape;
+          margin: 10mm;
+        }
+        .row:nth-child(even) {
+          page-break-after: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <code
+      >Dán danhsách từ vào dưới rồi nhấn nút để in (margin=10mm). Dấuchấm 。 để
+      ngăncách giữa các từ. Chú ý cúpháp-mẫu [漢(かん)][字(じ)] khi muốn viết
+      Furigana</code
+    >
+    <p id="txt" contenteditable="true">
+      [KANJI(kana)]。[漢(かん)][字(じ)]。。来[来(した)]来来来。したか日来ま。したしたかした。ししかしたかたか
+    </p>
+    <div id="cnt" class="container"></div>
+    <button id="btn">NHẤN ĐỂ IN</button>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('#btn').click(function() {
+        $('#cnt').html('');
+        var t = $('#txt').text().split('。');
+        for(let i = 0; i<t.length;) {
+          if(t[i]==''){
+            i++;
+          } else {
+           $('#cnt').append( '<div class="row"><span class="icon">鴻山</span><a style="font-size:'+fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div><div class="row"><span class="icon">鴻山</span><a style="font-size:' + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
+           $('#cnt').append( '<div class="row odd-page"><span class="icon">鴻山</span><a style="font-size:'+fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div><div class="row odd-page"><span class="icon">鴻山</span><a style="font-size:' + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
+           i += 2;
+          }
+        }
+        window.print();
+      });
+
+      function rtAdd(txt){
+        return txt.replace(/\(/g, '<rt>').replace(/\)/g, '</rt>').replace(/\[/g, '<ruby>').replace(/\]/g, '</ruby>');
+      }
+
+      function fSize(txt) {
+        switch(txt.replace(/(\(.+\))/g, '').replace(/\[/g, '').replace(/\]/g, '').length) {
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          return '250px';
+          break;
+          case 5:
+          return '200px';
+          break;
+          case 6:
+          return '170px';
+          break;
+          case 7:
+          return '140px';
+          break;
+          default:
+          return '120px';
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
