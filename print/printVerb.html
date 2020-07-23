@@ -16,7 +16,7 @@
       :root {
               --page-width: 210mm;
               --page-height: 297mm;
-              --page-margin: 10mm;
+              --page-margin: 0mm;
               --row-per-page: 4;
               --row-width: 210mm;
               --row-height: calc((var(--page-height) + 3 * var(--page-margin)) / var(--row-per-page));
@@ -25,7 +25,7 @@
               --col-height: calc(var(--row-height) - 2 * var(--row-padding));
               --col-img-width: var(--col-height);
               --col-word-width: calc(var(--row-width) - var(--col-img-width));
-              --col-text-dir: row;
+              --col-text-dir: row-reverse;
               --font-size-word: 5rem;
               --font-size-no: 2rem;
               --font-size-draw: 2rem;
@@ -161,7 +161,7 @@
               }
               @page {
                 size: A4 portrait;
-                margin: 10mm;
+                margin: 0mm;
               }
             }
     </style>
