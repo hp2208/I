@@ -880,9 +880,9 @@ var a =
     "note": "",
     "vi": "chơi ( nhạc cụ , pianô , vv . )",
     "img": "弾きます.jpg",
-    "furigana": "<ruby><rb>弾</rb><rp>(</rp><rt>はじ</rt><rp>)</rp></ruby>きます",
+    "furigana": "<ruby><rb>弾</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>きます",
     "en": "to flip, to snap, to flick, to repel, to use (an abacus), to calculate, to strum, to pluck the strings (of a guitar, etc.)",
-    "masu": "はじきます"
+    "masu": "ひきます"
   },
   {
     "no": 68,
@@ -903,12 +903,12 @@ var a =
     "is": false,
     "kanji": "降ります",
     "kanji2": "",
-    "note": "あめが~",
+    "note": "あめが",
     "vi": "mưa",
     "img": "あめが降ります.jpg",
-    "furigana": "<ruby><rb>降</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ります",
+    "furigana": "<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>ります",
     "en": "to descend (e.g. a mountain), to go down, to come down, to alight (e.g. from bus), to get off, to disembark, to dismount, to step down, to retire, to give up, to quit, to be granted, to be issued, to be given, to form (of frost, dew, mist, etc.), to be passed (from the body; e.g. of a roundworm)",
-    "masu": "おります"
+    "masu": "ふります"
   },
   {
     "no": 70,
@@ -1265,14 +1265,14 @@ var a =
     "no": 15,
     "group": "II",
     "is": false,
-    "kanji": "でんわをかけます",
+    "kanji": "かけます",
     "kanji2": "",
-    "note": "でんわを~",
-    "vi": "gọi [điện thoại ]",
+    "note": "でんわを",
+    "vi": "gọi [điện thoại]",
     "img": "でんわをかけます.jpg",
     "furigana": "でんわをかけます",
     "en": "to hang (e.g. picture), to hoist (e.g. sail), to raise (e.g. flag), to sit, to take (time, money), to expend (money, time, etc.), to make (a call), to multiply, to secure (e.g. lock), to put on (glasses, etc.), to cover, to burden someone, to apply (insurance), to turn on (an engine, etc.), to set (...",
-    "masu": "でんわをかけます"
+    "masu": "かけます"
   },
   {
     "no": 16,
@@ -1736,11 +1736,11 @@ var a =
     "kanji": "コピーします",
     "kanji2": "",
     "note": "",
-    "vi": "copy , phô - tô",
+    "vi": "copy , phôtô",
     "img": "コピーします.jpg",
-    "furigana": "こぴーします",
+    "furigana": "コピーします",
     "en": "copy, photocopy, blurb on a book jacket, catch copy",
-    "masu": "こぴーします"
+    "masu": "コピーします"
   },
   {
     "no": 9,
