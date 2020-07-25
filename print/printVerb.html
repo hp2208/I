@@ -218,7 +218,7 @@
       $('#btn').click(function () {
         let rowpage = parseInt(getComputedStyle(document.body).getPropertyValue('--row-per-page'));
         $('.container').html('');
-        for (let i = 0; i < a.length;) {
+        for (let i = 0; i < a.length;i+=rowpage) {
 
 
         for (let j = 0; j < rowpage ; j++) {
@@ -241,10 +241,7 @@
           a[i+j].masu+'</p><p>'+
           a[i+j].en+'</p></div></div>');
          }
-
-
-          i+=j;
-        }
+         }
         //window.print();
       });
       function isDraw(str){
