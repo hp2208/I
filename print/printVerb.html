@@ -216,7 +216,7 @@
     <script>
       var imgPath = 'imgs/';
       $('#btn').click(function () {
-        let rowpage = parseInt(getComputedStyle(element).getPropertyValue('--row-per-page'));
+        let rowpage = parseInt(getComputedStyle(document.body).getPropertyValue('--row-per-page'));
         $('.container').html('');
         for (let i = 0; i < a.length;) {
 
