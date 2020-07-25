@@ -216,73 +216,34 @@
     <script>
       var imgPath = 'imgs/';
       $('#btn').click(function () {
+        let rowpage = parseInt(getComputedStyle(element).getPropertyValue('--row-per-page'));
         $('.container').html('');
         for (let i = 0; i < a.length;) {
+
+
+        for (let j = 0; j < rowpage ; j++) {
           $('.container').append('<div class="row row-odd-page"> <div class="col col-img" style="background-image: url('+imgPath+
-          a[i].img+');"></div> <div class="col col-word col-word-'+
-          a[i].kanji. length +' col-align-left"><p>'+
-          a[i].furigana+'</p></div></div>');
-          $('.container').append('<div class="row row-odd-page"> <div class="col col-img" style="background-image: url('+imgPath+
-          a[i+1].img+');"></div> <div class="col col-word col-word-'+
-          a[i+1].kanji. length +' col-align-left"><p>'+
-          a[i+1].furigana+'</p></div></div>');
-          $('.container').append('<div class="row row-odd-page"> <div class="col col-img" style="background-image: url('+imgPath+
-          a[i+2].img+');"></div> <div class="col col-word col-word-'+
-          a[i+2].kanji. length +' col-align-left"><p>'+
-          a[i+2].furigana+'</p></div></div>');
-          $('.container').append('<div class="row row-odd-page"> <div class="col col-img" style="background-image: url('+imgPath+
-          a[i+3].img+');"></div> <div class="col col-word col-word-'+
-          a[i+3].kanji. length +' col-align-left"><p>'+
-          a[i+3].furigana+'</p></div></div>');
+          a[i+j].img+');"></div> <div class="col col-word col-word-'+
+          a[i+j].kanji. length +' col-align-left"><p>'+
+          a[i+j].furigana+'</p></div></div>');
+          
+        }
 
 
-
-
-
+        for (let j = 0; j < rowpage ; j++) {
           $('.container').append('<div class="row row-even-page"><div class="col col-no col-text col-align-center"><p>'+
-          a[i].no+'</p><p><a class="icon icon-'+
-          a[i].is+'">鴻山</a></p><p>'+
-          a[i].group+'</p></div><div class="col col-draw col-text col-align-center"><p>'+
-          isDraw(a[i].furigana)+'</p></div><div class="col col-define col-text col-align-center"><p>'+
-          a[i].vi+'</p></div><div class="col col-example col-text col-align-center"><p>'+
-          a[i].note+
-          a[i].masu+'</p><p>'+
-          a[i].en+'</p></div></div>');
-
-          $('.container').append('<div class="row row-even-page"><div class="col col-no col-text col-align-center"><p>'+
-          a[i+1].no+'</p><p><a class="icon icon-'+
-          a[i+1].is+'">鴻山</a></p><p>'+
-          a[i+1].group+'</p></div><div class="col col-draw col-text col-align-center"><p>'+
-          isDraw(a[i+1].furigana)+'</p></div><div class="col col-define col-text col-align-center"><p>'+
-          a[i+1].vi+'</p></div><div class="col col-example col-text col-align-center"><p>'+
-          a[i+1].note+
-          a[i+1].masu+'</p><p>'+
-          a[i+1].en+'</p></div></div>');
-
-          $('.container').append('<div class="row row-even-page"><div class="col col-no col-text col-align-center"><p>'+
-          a[i+2].no+'</p><p><a class="icon icon-'+
-          a[i+2].is+'">鴻山</a></p><p>'+
-          a[i+2].group+'</p></div><div class="col col-draw col-text col-align-center"><p>'+
-          isDraw(a[i+2].furigana)+'</p></div><div class="col col-define col-text col-align-center"><p>'+
-          a[i+2].vi+'</p></div><div class="col col-example col-text col-align-center"><p>'+
-          a[i+2].note+
-          a[i+2].masu+'</p><p>'+
-          a[i+2].en+'</p></div></div>');
-
-          $('.container').append('<div class="row row-even-page"><div class="col col-no col-text col-align-center"><p>'+
-          a[i+3].no+'</p><p><a class="icon icon-'+
-          a[i+3].is+'">鴻山</a></p><p>'+
-          a[i+3].group+'</p></div><div class="col col-draw col-text col-align-center"><p>'+
-          isDraw(a[i+3].furigana)+'</p></div><div class="col col-define col-text col-align-center"><p>'+
-          a[i+3].vi+'</p></div><div class="col col-example col-text col-align-center"><p>'+
-          a[i+3].note+
-          a[i+3].masu+'</p><p>'+
-          a[i+3].en+'</p></div></div>');
+          a[i+j].no+'</p><p><a class="icon icon-'+
+          a[i+j].is+'">鴻山</a></p><p>'+
+          a[i+j].group+'</p></div><div class="col col-draw col-text col-align-center"><p>'+
+          isDraw(a[i+j].furigana)+'</p></div><div class="col col-define col-text col-align-center"><p>'+
+          a[i+j].vi+'</p></div><div class="col col-example col-text col-align-center"><p>'+
+          a[i+j].note+
+          a[i+j].masu+'</p><p>'+
+          a[i+j].en+'</p></div></div>');
+         }
 
 
-
-
-          i+=4;
+          i+=j;
         }
         //window.print();
       });
