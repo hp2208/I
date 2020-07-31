@@ -8,17 +8,8 @@
     />
 
     <title>HS</title>
-    <link rel="preload" href="../fonts/ipamp.ttf" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="../fonts/KanjiStrokeOrders.ttf" as="font" crossorigin="anonymous" />
+    
     <style>
-            @font-face {
-        font-family: IPAPMincho;
-        src: url('../fonts/ipamp.ttf');
-      }
-      @font-face {
-        font-family: KanjiStrokeOrders;
-        src: url('../fonts/KanjiStrokeOrders_v4.003.ttf');
-      }
       * {
         box-sizing: border-box;
       }
@@ -136,6 +127,12 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      
+var IPAPMincho = new FontFace('IPAPMincho', 'url(../fonts/ipamp.ttf)');
+document.fonts.add(IPAPMincho);
+      var KanjiStrokeOrders = new FontFace('KanjiStrokeOrders', 'url(../fonts/KanjiStrokeOrders_v4.003.ttf)');
+document.fonts.add(KanjiStrokeOrders);
+      $( document ).ready(function() {
       $('#btn').click(function() {
         $('#cnt').html('');
         var x = '<div class="row"><span class="icon">鴻山</span><a style="font-size:' ;
@@ -152,10 +149,9 @@
               $('#cnt').append(y + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
             } catch(e){}
         }
-        $(document).ready( function() {
           window.print();
-});
       });
+    });
 
       function rtAdd(txt){
         return txt.replace(/\(/g, '<rt>').replace(/\)/g, '</rt>').replace(/\[/g, '<ruby>').replace(/\]/g, '</ruby>');
