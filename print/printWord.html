@@ -10,13 +10,21 @@
     <title>HS</title>
     
     <style>
+      @font-face {
+          font-family: IPAPMincho;
+          src: url("../fonts/ipamp.ttf");
+        }
+        @font-face {
+          font-family: KanjiStrokeOrders;
+          src: url("../fonts/KanjiStrokeOrders_v4.003.ttf");
+      }
+          
       * {
         box-sizing: border-box;
       }
       html {
         font-size: 15px;
-        font-family: KanjiStrokeOrders;
-        font-family: IPAPMincho;
+        font-family: IPAPMincho, KanjiStrokeOrders;
           background-color: white;
       }
       button {
@@ -89,6 +97,10 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
       }
+      em {
+        opacity: 0;
+        font-family: KanjiStrokeOrders;
+      }
       #txt {
         border-radius: 6px;
         border: 1px solid black;
@@ -101,7 +113,8 @@
         p,
         button,
         table,
-        code {
+        code,
+        em {
           display: none;
         }
         @page {
@@ -115,8 +128,9 @@
     </style>
   </head>
   <body>
+    <em>xyz</em>
     <code
-          >Dán danhsách từ vào dưới rồi nhấn nút <b><mark>[IN]</mark></b>Dấuchấm  <big><b><mark>[ 。]</mark></b></big>  để
+          >Dán danhsách từ vào dưới rồi nhấn nút <b><mark>[IN]</mark></b> Dấuchấm  <big><b><mark>[ 。]</mark></b></big>  để
       ngăncách giữa các từ. Chú ý cúpháp-mẫu   <b><mark>[漢(かん)][字(じ)]</mark></b>khi muốn viết
       Furigana</code
     >
@@ -132,10 +146,7 @@
     ></script>
     <script>
       
-var IPAPMincho = new FontFace('IPAPMincho', 'url(../fonts/ipamp.ttf)');
-document.fonts.add(IPAPMincho);
-      var KanjiStrokeOrders = new FontFace('KanjiStrokeOrders', 'url(../fonts/KanjiStrokeOrders_v4.003.ttf)');
-document.fonts.add(KanjiStrokeOrders);
+
       $( document ).ready(function() {
         
       $('#btn').click(function() {
@@ -154,7 +165,7 @@ document.fonts.add(KanjiStrokeOrders);
               $('#cnt').append(y + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
             } catch(e){}
         }
-          window.print().delay(1000);
+          window.print();
       });
         
         
