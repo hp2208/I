@@ -138,19 +138,23 @@
     <script>
       $('#btn').click(function() {
         $('#cnt').html('');
+        var x = '<div class="row"><span class="icon">鴻山</span><a style="font-size:' ;
+        var y = '<div class="row odd-page"><span class="icon">鴻山</span><a style="font-size:' ;
         var t = $('#txt').text().replace(/\s/g, '').split('。').filter(item => item);
         for(let i = 0; i<t.length;i+=2) {
-           $('#cnt').append( '<div class="row"><span class="icon">鴻山</span><a style="font-size:'+fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div>');
+           $('#cnt').append( x +fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div>');
             try {
-              $('#cnt').append( '<div class="row"><span class="icon">鴻山</span><a style="font-size:' + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
+              $('#cnt').append( x + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
             } catch(e){}
             
-           $('#cnt').append( '<div class="row odd-page"><span class="icon">鴻山</span><a style="font-size:'+fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div>');
+           $('#cnt').append( y +fSize(t[i])+'"><ruby>'+rtAdd(t[i])+'</ruby></a></div>');
             try {
-              $('#cnt').append( '<div class="row odd-page"><span class="icon">鴻山</span><a style="font-size:' + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
+              $('#cnt').append(y + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
             } catch(e){}
         }
-        window.print();
+        document.fonts.onloadingdone = function (fontFaceSetEvent) {
+          window.print();
+};
       });
 
       function rtAdd(txt){
