@@ -152,9 +152,9 @@
               $('#cnt').append(y + fSize(t[i+1])+'"><ruby>'+rtAdd(t[i+1])+'</ruby></a></div>' );
             } catch(e){}
         }
-        document.fonts.onloadingdone = function (fontFaceSetEvent) {
+        $(document).ready( function() {
           window.print();
-};
+});
       });
 
       function rtAdd(txt){
