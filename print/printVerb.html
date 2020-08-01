@@ -215,6 +215,7 @@
     <script src="imgs/json.js"></script>
     <script>
       var imgPath = 'imgs/';
+      $( document ).ready(function() {
       $('#btn').click(function () {
         let rowpage = parseInt(getComputedStyle(document.body).getPropertyValue('--row-per-page'));
         $('.container').html('');
@@ -242,10 +243,11 @@
           a[i+j].en+'</p></div></div>');
          }
          }
-        //window.print();
+        window.print();
+      });
       });
       function isDraw(str){
-        var e = str.match(/(?<=\<rb\>\s*).*?(?=\s*\<\/rb\>)/gs);
+        var e = str.match(/<rb>.*?<\/rb>/gs);
         if(e==null) {
           return '';
         } else {

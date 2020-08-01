@@ -22,6 +22,13 @@
       * {
         box-sizing: border-box;
       }
+      code {
+        user-select: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
       html {
         font-size: 15px;
         font-family: IPAPMincho, KanjiStrokeOrders;
@@ -101,6 +108,13 @@
         opacity: 0;
         font-family: KanjiStrokeOrders;
       }
+      mark {
+        background: #333;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 2px;
+        align-content:center;
+      }
       .ctext {
         text-align: center;
       }
@@ -133,7 +147,7 @@
   <body>
     <div class="ctext">
     <em>xyz</em><br/>
-    <code>Dán danhsách từ vào dưới rồi nhấn nút <b><mark>[IN]</mark></b><br/>Dấuchấm  <big><b><mark>[ 。]</mark></b></big>  để
+    <code>Dán danhsách từ vào dưới rồi nhấn nút <b><mark>IN</mark></b><br/>Dấuchấm  <big><b><mark>。</mark></b></big>  để
       ngăncách giữa các từ<br/>Chú ý cúpháp-mẫu   <b><mark>[漢(かん)][字(じ)]</mark></b> khi muốn viết
       Furigana</code>
     <p id="txt" contenteditable="true">
