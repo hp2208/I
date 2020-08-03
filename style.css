@@ -33,7 +33,7 @@ body {
     position: fixed;
 	bottom: 20px;
 	right: 30px;
-    font-size: 12x;
+    font-size: 12px;
 }
 #btn-rt {
     width:40px;
@@ -61,21 +61,29 @@ body {
     position: fixed;
 	bottom: 30px;
 	right: 240px;
-    font-size: 8x;
+    font-size: 15px;
 }
 #btn-prev {
     width:40px;
     position: fixed;
 	bottom: 30px;
 	right: 290px;
-    font-size: 8x;
+    font-size: 15px;
 }
 
 rt {
-  visibility:hidden;
+  filter: blur(2px);
+  transition: all 0.25s ease-out;
+  white-space:nowrap !important;
+}
+tr > td:nth-child(3) {
+  filter: blur(3px);
+  transition: all 0.25s ease-out;
+  padding-left:5px;
 }
 .visible-visibility {
-  visibility:visible;
+  filter: blur(0) !important;
+  transition: all 0.25s ease-out;
 }
 
 #accordion,.card,.card-header {
