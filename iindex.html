@@ -25,8 +25,8 @@
       </div><br>
         <button id="btn-play" class="btn btn-danger btn-round hpp">⚪</button>
         <textarea class="json"></textarea>
-        <script src="../bootstrap/js/jquery.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      
         <script>
             $(".btn").click(function () {
               let tS = parseInt($('#tS').text());
@@ -58,8 +58,9 @@
                     }
 
                     for (let j = 1; j <= maxTopicIndex; j++) {
-                      timedText(k, j);
-                        loadScript(getJsonPath(k,j), function () {});
+                        loadScript(getJsonPath(k,j), function () {
+                          timedText(k, j);
+                        });
                       
                       
                         try {
@@ -119,12 +120,12 @@
                         }
 
                         unit.item.push(item);
-                        unit.title[0] = gPlayData.jptitle
+                        unit.title[0] = gPlayData.jptitle;
                     }
                     json.push(unit);
                   
                 }
-                $(".json").text(JSON.stringify(json, null, "\t"));alert(json.length)
+                $(".json").text(JSON.stringify(json, null, "\t"));
             });
 
             function loadJsonType2() {
@@ -177,7 +178,7 @@
                 }
 
                 script.src = url;
-                $("body").append(script);
+               document.getElementsByTagName("head")[0].appendChild(script);
             }
 
             function getJsonPath(lessonIndex, topicIndex) {
