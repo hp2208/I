@@ -154,7 +154,7 @@ document.getElementById('btn-rt').onclick = function () {
 };
 //Toggle contents of Japanese 
 document.getElementById('btn-jaSRT').onclick = function () {
-  $('td').toggleClass("visible-visibility");
+  $('td').toggleClass("blur-none");
 };
 //Toggle contents of English
 document.getElementById('btn-enSRT').onclick = function () {
