@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>山</title>
+        <style>
+            #btn-play {
+                width: 200px;
+                height: 50px;
+            }
+            textarea {
+                width: 95%;
+                height: 80vh;
+            }
+        </style>
+    </head>
+    <body>
+      <div id="tS" contenteditable="true" >
+        1
+      </div>
+      <div id="tE" contenteditable="true" >
+        2
+      </div><br>
+        <button id="btn-play" class="btn btn-danger btn-round hpp">⚪</button>
+        <textarea class="json"></textarea>
+        <script src="../bootstrap/js/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>
+            $(".btn").click(function () {
+              let tS = parseInt($('#tS').text());
+              let tE = parseInt($('#tE').text());
+              let json = [];
+                for (let k = tS; k <= tE; k++) {
+                    let maxTopicIndex = 4;
+                    let unit = {
+                        title: [""],
+                        item: [],
+                    };
+                    switch (k) {
+                        case 4:
+                        case 5:
+                        case 29:
+                        case 38:
+                        case 49:
+                            maxTopicIndex = 5;
+                            break;
+                        case 19:
+                        case 42:
+                            maxTopicIndex = 3;
+                            break;
+                        case 44:
+                            maxTopicIndex = 6;
+                            break;
+                        default:
+                            maxTopicIndex = 4;
+                    }
+
+                    for (let j = 1; j <= maxTopicIndex; j++) {
+                      timedText(k, j);
+                        loadScript(getJsonPath(k,j), function () {});
+                      
+                      
+                        try {
+                            if (gPlayData.mp3[0] === "@1") {
+                                gPlayData.mp3.shift();
+                            }
+                        } catch (e) {}
+
+                        let item = {
+                            sura: "",
+                            name: ["", ""],
+                            quote: [],
+                        };
+                        item.sura = gPlayData.mp3[0];
+                        item.name[0] = gPlayData.jp[0]
+                            .match(/<th>.*?<\/th>/gs)[0]
+                            .replace(/<th>/g, "")
+                            .replace(/<\/th>/g, "")
+                            .replace(/．/g, "")
+                            .trim();
+
+                        item.name[1] = gPlayData.jp[0]
+                            .match(/2\"\>.*?<\/td>/gs)[0]
+                            .replace(/2\">/g, "")
+                            .replace(/<\/td>/g, "")
+                            .trim();
+
+                        for (var i = 1; i < gPlayData.jp.length; i++) {
+                            let quote = {
+                                sura: "",
+                                ja: ["", "", ""],
+                                en: ["", "", ""],
+                                vi: ["", "", ""],
+                            };
+                            quote.sura = gPlayData.mp3[i];
+
+                            quote.ja[0] = gPlayData.jp[i]
+                                .match(/<th>.*?<\/th>/gs)[0]
+                                .replace(/<th>/g, "")
+                                .replace(/<\/th>/g, "")
+                                .replace(/）/g, "")
+                                .trim();
+
+                            quote.ja[2] = gPlayData.jp[i]
+                                .match(/<td>.*?<\/td>/gs)[0]
+                                .replace(/<td>/g, "")
+                                .replace(/<\/td>/g, "")
+                                .trim();
+                            quote.ja[1] = gPlayData.jp[i]
+                                .match(/d\"\>.*?<\/td>/gs)[0]
+                                .replace(/d\">/g, "")
+                                .replace(/<\/td>/g, "")
+                                .replace(/：/g, "")
+                                .trim();
+
+                            item.quote.push(quote);
+                        }
+
+                        unit.item.push(item);
+                        unit.title[0] = gPlayData.jptitle
+                    }
+                    json.push(unit);
+                  
+                }
+                $(".json").text(JSON.stringify(json, null, "\t"));alert(json.length)
+            });
+
+            function loadJsonType2() {
+                let j = gPlayData;
+                let e = {
+                    beforeLink: "",
+                    nextLink: "",
+                    jaTitle: "",
+                    enTitle: "",
+                    para: [],
+                };
+                e.beforeLink = j.beforelink.split("?")[1];
+                e.nextLink = j.nextlink.split("?")[1];
+                e.jaTitle = j.jptitle;
+                try {
+                    e.enTitle = j.entitle;
+                } catch (e) {}
+                for (var i = 0; i < j.para.length; i++) {
+                    let el = {
+                        mp3: "",
+                        ja: "",
+                        en: "",
+                    };
+                    el.ja = j.para[i].script;
+                    if (j.para[i].en != null) {
+                        el.en = j.para[i].en;
+                    }
+                    el.mp3 = j.para[i].fileName;
+                    e.para.push(el);
+                }
+                return e;
+            }
+            function loadScript(url, callback) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+
+                if (script.readyState) {
+                    //IE
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    };
+                } else {
+                    //Others
+                    script.onload = function () {
+                        callback();
+                    };
+                }
+
+                script.src = url;
+                $("body").append(script);
+            }
+
+            function getJsonPath(lessonIndex, topicIndex) {
+                return "json\/" + formatNumber(lessonIndex) + formatNumber(topicIndex) + ".js";
+            }
+
+            function formatNumber(num) {
+                if (num < 10) {
+                    return "0" + num;
+                } else {
+                    return num;
+                }
+            }
+            function getLessonTopic(link) {
+                return [parseInt(link.slice(0, 2)), parseInt(link.slice(2, 4))];
+            }
+          function timedText(a, b) {
+            setInterval(function () {
+  $('#tS').text(getJsonPath(a,b));
+}, 1000) 
+}
+
+        </script>
+    </body>
+</html>
