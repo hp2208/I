@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+      body, html {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      iframe {
+        width: 100vw;
+        height: 100vh;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: green;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <button id="bt-1145" onclick="openFullscreen()">
+      Don't click me
+    </button>
+    <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials">
+</iframe>
+    <script>
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  document.getElementById('bt-1145').hidden = true;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
+}
+</script>
+  </body>
+</html>
